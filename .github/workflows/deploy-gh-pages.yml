@@ -23,7 +23,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn --cwd excalidraw-app exec vite build --base=/excalidraw/
+        run: cd excalidraw-app && yarn vite build --base=/excalidraw/
         env:
           VITE_APP_DISABLE_SENTRY: true
 
